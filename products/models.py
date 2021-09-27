@@ -15,6 +15,8 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
+    objects = models.Manager()
+
 
 class Product(models.Model):
     category = models.ForeignKey(
@@ -30,3 +32,5 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    objects = models.Manager()
