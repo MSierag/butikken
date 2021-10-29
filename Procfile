@@ -1,0 +1,1 @@
+web: gunicorn butikken.wsgi:application
